@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home/X</title>
+    <link rel="shortcut icon" href="https://abs.twimg.com/favicons/twitter.3.ico">
+    <link rel="stylesheet" href="./src/output.css">
+    <style>
+        /* Add custom scrollbar styles using Tailwind's @layer */
+        @layer utilities {
+            /* Scrollbar overall width and height */
+            ::-webkit-scrollbar {
+                width: 12px; /* Vertical scrollbar */
+                height: 12px; /* Horizontal scrollbar */
+            }
+
+            /* Scrollbar track (background) */
+            ::-webkit-scrollbar-track {
+                background-color: rgb(62, 65, 68);
+                border-radius: 10px;
+            }
+
+            /* Scrollbar thumb (the draggable part) */
+            ::-webkit-scrollbar-thumb {
+                background-color: rgb(22, 24, 28);
+                border-radius: 10px;
+                border: 2px solid rgb(62, 65, 68); /* Optional: adds a border to the thumb */
+            }
+
+            /* Scrollbar thumb hover state */
+            ::-webkit-scrollbar-thumb:hover {
+                background-color: rgb(42, 45, 48); /* Darker thumb color on hover */
+            }
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <div class="grid 1480:grid-cols-[1fr_1.6fr_1.4fr] 1000:grid-cols-[1.5fr_1.5fr] grid-cols-[1fr]">
+        <div class="first pt-3 w-full 1480:block hidden">
+            <div class="sidebar flex flex-col gap-y-3 sticky top-0">
+                <div class="logo relative left-[111px] mb-4">
+                    <img src="./svgs_imgs/x.svg" alt="x" class="w-8 h-8 invert cursor-pointer">
+                </div>
+                <ul class="flex flex-col items-start relative left-[100px] w-1/2 gap-y-0.5">
+                    <li class="relative left-[4px] flex items-center">
+                        <img src="./svgs_imgs/home.svg" alt="home" class="w-7 h-7">
+                        <span>Home</span>
+                    </li>
+                    <li class="relative left-[5px] flex items-center">
+                        <img src="./svgs_imgs/explore.svg" alt="explore" class="w-7 h-7">
+                        <span>Explore</span>
+                    </li>
+                    <li class="relative left-[11px] flex items-center">
+                        <img src="./svgs_imgs/notifications.svg" alt="notifications" class="w-7 h-7">
+                        <span>Notifications</span>
+                    </li>
+                    <li class="relative left-[4px] flex items-center">
+                        <img src="./svgs_imgs/messages.svg" alt="messages" class="w-7 h-7">
+                        <span>Messages</span>
+                    </li>
+                    <li class="relative left-[4px] flex items-center">
+                        <img src="./svgs_imgs/grok.svg" alt="bookmarks" class="w-7 h-7">
+                        <span>Grok</span>
+                    </li>
+                    <li class="relative left-[12px] flex items-center">
+                        <img src="./svgs_imgs/communities.svg" alt="lists" class="w-7 h-7">
+                        <span>Communities</span>
+                    </li>
+                    <li class="relative left-[4px] flex items-center">
+                        <img src="./svgs_imgs/x.svg" alt="profile" class="w-7 h-7 invert">
+                        <span>Premium</span>
+                    </li>
+                    <li class="relative left-[3px] flex items-center">
+                        <img src="./svgs_imgs/profile.svg" alt="more" class="w-7 h-7">
+                        <span>Profile</span>
+                    </li>
+                    <li class="relative left-[4px] flex items-center">
+                        <img src="./svgs_imgs/more.svg" alt="more" class="w-7 h-7 flex items-center">
+                        <span>More</span>
+                    </li>
+                </ul>
+                <button class="bg-white w-[60%] relative left-[101px] text-black px-20 py-3 rounded-[40px] text-xl font-semibold hover:bg-[rgb(239,243,244)]
+                ">Post</button>
+                <div class="account flex items-center gap-x-3 w-fit cursor-pointer hover:bg-[#e7e9ea1a] hover:border-none hover:rounded-full p-3 relative left-[7.7rem] top-14">
+                    <div class="pfp">
+                        <img src="./svgs_imgs/pfp.jpg" alt="pfp" class="w-10 h-10 rounded-full">
+                    </div>
+                    <div class="flex flex-col justify-center">
+                        <div class="flex items-center gap-x-1">
+                            <span class="font-bold">Shinjan Saha</span>
+                            <img src="./svgs_imgs/verified.svg" alt="verified" class="w-5 h-5">
+                        </div>
+                        <span class="font-light text-[rgb(113,118,123)]">@ShinjanS57336</span>
+                    </div>
+                    <div class="more ml-6">
+                        <img src="./svgs_imgs/more2.svg" alt="more" class="w-5 h-5">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="second w-full relative">
+            <div class="forfollow sticky top-0 z-1 bg-black 1000:visible invisible backdrop-blur-3xl opacity-90">
+                <div class="top flex items-center justify-evenly gap-x-[10rem] m-4 cursor-pointer">
+                    <div class="first text-[15px] font-medium">For You</div>
+                    <div class="second text-[15px] font-medium">Following</div>
+                </div>
+                <div class="w-14 h-1 relative bottom-0 left-[113px] bg-[rgb(29,155,240)] rounded-full"></div>
+                <div class="h-[1px] bg-[#2D3134]"></div>
+            </div>
+
+            <!-- vertical borders -->
+            <div class="absolute top-0 bottom-0 left-0 w-[1px] bg-[#2D3134]"></div>
+            <div class="absolute top-0 bottom-0 right-0 w-[1px] bg-[#2D3134]"></div>
+
+            <div class="whatshappening 1480:flex m-4 gap-x-3 hidden">
+                <img src="./svgs_imgs/pfp.jpg" alt="pfp" class="w-10 h-10 rounded-full">
+                <div class="content flex flex-col gap-y-4 w-full">
+                    <input type="text" class="text-[20px] bg-black text-[#757575] mt-1 focus:outline-none focus:ring-0" placeholder="What is happening?!">
+                    <div class="icons1 flex items-center justify-between w-full">
+                        <div class="icons flex items-center gap-x-1">
+                            <img src="./svgs_imgs/media.svg" alt="media" class="w-9 h-9 cursor-pointer p-2 rounded-full hover:bg-[rgb(3,16,24)]">
+                            <img src="./svgs_imgs/GIF.svg" alt="gif" class="w-9 h-9 cursor-pointer p-2 rounded-full hover:bg-[rgb(3,16,24)]">
+                            <img src="./svgs_imgs/grok2.svg" alt="grok" class="w-9 h-9 cursor-pointer p-2 rounded-full hover:bg-[rgb(3,16,24)]">
+                            <img src="./svgs_imgs/poll.svg" alt="poll" class="w-9 h-9 cursor-pointer p-2 rounded-full hover:bg-[rgb(3,16,24)]">
+                            <img src="./svgs_imgs/emoji.svg" alt="emoji" class="w-9 h-9 cursor-pointer p-2 rounded-full hover:bg-[rgb(3,16,24)]">
+                            <img src="./svgs_imgs/schedule.svg" alt="schedule" class="w-9 h-9 cursor-pointer p-2 rounded-full hover:bg-[rgb(3,16,24)]">
+                            <img src="./svgs_imgs/location.svg" alt="location" class="w-5 h-5 cursor-pointer">
+                        </div>
+                        <button class="bg-[rgb(120,122,122)] text-black px-5 py-2 rounded-[30px] text-[15px] font-semibold cursor-default">Post</button>
+                    </div>
+                </div>
+            </div>
+            <div class="h-[1px] bg-[#2D3134]"></div>
+            <div class="posts">
+                <div class="post flex gap-x-2 450:m-4 m-7 cursor-pointer">
+                    <img src="./svgs_imgs/pfp.jpg" alt="pfp" class="w-10 h-10 rounded-full">
+                    <div class="flex flex-col gap-y-3 w-full">
+                        <div class="flex w-full items-center justify-between">
+                            <div class="flex 450:flex-row flex-col justify-center 450:items-center gap-x-2">
+                                <div class="account_verified flex items-center gap-x-1">
+                                    <h1 class="text-[15px] font-bold hover:underline">Shinjan Saha</h1>
+                                    <img src="./svgs_imgs/verified.svg" alt="verified" class="w-5 h-5">
+                                </div>
+                                <span class="post-time text-[15px] font-light text-[rgb(113,118,123)]" data-created-at="2025-01-01T02:00:00.000Z">@ShinjanS57336 . 6h</span>
+                            </div>
+                            <img src="./svgs_imgs/more3.svg" alt="more" class="more w-5 h-5">
+                        </div>
+                        <span>Me at the start of the week:</span>
+                        <span><b>New Year's Resolution</b>: "This week, I'll be productive and get everything done!"</span>                 
+                        <span><b>Me on Wednesday</b>: "Okay, but first, I need to take a 3-hour nap to recharge for productivity."</span>
+                        <span>🤣🤣🤣</span>
+                        <div class="icons2 flex items-center gap-x-6 justify-between">
+                            <div class="icon1 flex items-center">
+                                <img src="./svgs_imgs/reply.svg" alt="reply" class="w-5 h-5">
+                                <span class="text-[13px] font-light">85</span>
+                            </div>
+                            <div class="icon2 flex items-center gap-x-1">
+                                <img src="./svgs_imgs/repost.svg" alt="repost" class="w-5 h-5">
+                                <span class="text-[13px] font-light">14</span>
+                            </div>
+                            <div class="icon3 flex items-center gap-x-1">
+                                <img src="./svgs_imgs/like.svg" alt="like" class="w-5 h-5">
+                                <span class="text-[13px] font-light">1.1K</span>
+                            </div>
+                            <div class="icon4 flex items-center gap-x-1">
+                                <img src="./svgs_imgs/view.svg" alt="view" class="w-5 h-5">
+                                <span class="text-[13px] font-light">1.8K</span>
+                            </div>
+                            <div class="icons5 flex items-center gap-x-2">
+                                <img src="./svgs_imgs/bookmark.svg" alt="bookmark" class="w-5 h-5 hidden 310:block">
+                                <img src="./svgs_imgs/share.svg" alt="share" class="w-8 h-8 310:w-5 310:h-5">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-[1px] bg-[#2D3134]"></div>
+
+                <div class="post flex gap-x-2 m-4 cursor-pointer">
+                    <img src="./svgs_imgs/lspn.jpg" alt="lspn" class="w-10 h-10 rounded-full">
+                    <div class="flex flex-col gap-y-3 w-full">
+                        <div class="flex w-full items-center justify-between">
+                            <div class="flex 450:flex-row flex-col justify-center 450:items-center gap-x-2">
+                                <div class="account_verified flex items-center gap-x-1">
+                                    <h1 class="text-[15px] font-bold hover:underline">LSPN_FC</h1>
+                                    <img src="./svgs_imgs/verified.svg" alt="verified" class="w-5 h-5">
+                                </div>
+                                <span class="post-time text-[15px] font-light text-[rgb(113,118,123)]" data-created-at="2024-12-27T00:00:00.000Z">@LSPN_FC . Dec 27</span>
+                            </div>
+                            <img src="./svgs_imgs/more3.svg" alt="more" class="more w-5 h-5">
+                        </div>
+                        <span>Lionel Messi being the most humble athlete to exist...</span>
+                        <span>A heartwarming thread</span>
+                        <span>The last one is unbelivable from him</span>
+                        <img src="./svgs_imgs/messi.jpg" alt="messi" class="w-auto h-auto max-h-[500px] rounded-[20px] border-[#2D3134]">
+                        <div class="icons2 flex items-center gap-x-6 justify-between">
+                            <div class="icon1 flex items-center gap-x-1">
+                                <img src="./svgs_imgs/reply.svg" alt="reply" class="w-5 h-5">
+                                <span class="text-[13px] font-light">56</span>
+                            </div>
+                            <div class="icon2 flex items-center gap-x-1">
+                                <img src="./svgs_imgs/repost.svg" alt="repost" class="w-5 h-5">
+                                <span class="text-[13px] font-light">676</span>
+                            </div>
+                            <div class="icon3 flex items-center gap-x-1">
+                                <img src="./svgs_imgs/like.svg" alt="like" class="w-5 h-5">
+                                <span class="text-[13px] font-light">20K</span>
+                            </div>
+                            <div class="icon4 flex items-center gap-x-1">
+                                <img src="./svgs_imgs/view.svg" alt="view" class="w-5 h-5">
+                                <span class="text-[13px] font-light">738K</span>
+                            </div>
+                            <div class="icons5 flex items-center gap-x-2">
+                                <img src="./svgs_imgs/bookmark.svg" alt="bookmark" class="w-5 h-5 hidden 310:block">
+                                <img src="./svgs_imgs/share.svg" alt="share" class="w-8 h-8 310:w-5 310:h-5">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-[1px] bg-[#2D3134]"></div>
+
+                <div class="post flex gap-x-2 m-4 cursor-pointer">
+                    <img src="./svgs_imgs/ez.jpg" alt="ez" class="w-10 h-10 rounded-full">
+                    <div class="flex flex-col gap-y-3 w-full">
+                        <div class="flex w-full items-center justify-between">
+                            <div class="flex 450:flex-row flex-col justify-center 450:items-center gap-x-2">
+                                <div class="account_verified flex items-center gap-x-1">
+                                    <h1 class="text-[15px] font-bold hover:underline">Neeraj Walia</h1>
+                                    <img src="./svgs_imgs/verified.svg" alt="verified" class="w-5 h-5">
+                                </div>
+                                <span class="post-time text-[15px] font-light text-[rgb(113,118,123)]" data-created-at="2024-10-23T07:00:00.000Z">@ezSnippet . Oct 23</span>
+                            </div>
+                            <img src="./svgs_imgs/more3.svg" alt="more" class="more w-5 h-5">
+                        </div>
+                        <span>Ab to sudhar jao</span>
+                        <img src="./svgs_imgs/meme1.jpg" alt="meme" class="w-auto h-auto max-h-[500px] rounded-[20px] border-[#2D3134]">
+                        <div class="icons2 flex items-center gap-x-6 justify-between">
+                            <div class="icon1 flex items-center gap-x-1">
+                                <img src="./svgs_imgs/reply.svg" alt="reply" class="w-5 h-5">
+                                <span class="text-[13px] font-light">342</span>
+                            </div>
+                            <div class="icon2 flex items-center gap-x-1">
+                                <img src="./svgs_imgs/repost.svg" alt="repost" class="w-5 h-5">
+                                <span class="text-[13px] font-light">1.9K</span>
+                            </div>
+                            <div class="icon3 flex items-center gap-x-1">
+                                <img src="./svgs_imgs/like.svg" alt="like" class="w-5 h-5">
+                                <span class="text-[13px] font-light">7K</span>
+                            </div>
+                            <div class="icon4 flex items-center gap-x-1">
+                                <img src="./svgs_imgs/view.svg" alt="view" class="w-5 h-5">
+                                <span class="text-[13px] font-light">72K</span>
+                            </div>
+                            <div class="icons5 flex items-center gap-x-2">
+                                <img src="./svgs_imgs/bookmark.svg" alt="bookmark" class="w-5 h-5 hidden 310:block">
+                                <img src="./svgs_imgs/share.svg" alt="share" class="w-8 h-8 310:w-5 310:h-5">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="h-[1px] bg-[#2D3134] mb-24"></div>
+            </div>
+        </div>
+        <div class="third w-full hidden 1000:block">
+            <div class="search flex items-center h-12 w-[70%] bg-[#202327] text-[#757575] rounded-[40px] px-5 ml-10 mt-1 z-10 sticky top-0">
+                <img src="./svgs_imgs/search.svg" alt="search" class="w-11 h-11 p-3">
+                <input type="text" class="bg-[#202327] w-[50%] font-light focus:outline-none focus:ring-0" placeholder="Search">
+            </div>  
+            <div class="premium w-[70%] bg-black border border-[#2D3134] rounded-[20px] ml-10 mt-5 p-4 flex flex-col gap-y-3">
+                <h1 class="text-[24px] font-bold">Try Premium for free today</h1>
+                <p class="text-[15px]">Upgrade your experience with less ads, power tools, and more with Premium.</p>
+                <button class="bg-white w-[50%] text-black p-1 rounded-[30px] text-[15px] font-semibold hover:bg-[rgb(239,243,244)]">Start free 14-day trial</button>
+            </div>
+            <div class="whats w-[70%] bg-black border border-[#2D3134] rounded-[20px] ml-10 mt-5 p-4">
+                <h1 class="text-[24px] font-bold">What's happening</h1>
+                <div class="box1 flex items-center gap-x-3 cursor-pointer">
+                    <img src="./svgs_imgs/live.jpg" alt="live" class="w-24 h-24">
+                    <div class="box2 flex flex-col">
+                        <h1 class="text-[15px] font-bold">Anyma at Sphere</h1>
+                        <span class="text-[13px] text-[rgb(113,118,123)]">LIVE</span>
+                    </div>
+                </div>
+                <div class="box3 mt-6 space-y-3 cursor-pointer">
+                    <div class="one">
+                        <div class="w-full flex items-center justify-between">
+                            <span class="text-[rgb(113,118,123)] text-[13px]">Trending in India</span>
+                            <img src="./svgs_imgs/more3.svg" alt="more" class="more">
+                        </div>
+                        <h1 class="text-[15px] font-bold">DSP Siraj</h1>
+                        <span class="text-[13px] text-[rgb(113,118,123)]">7,172 posts</span>
+                    </div>
+                    <div class="two">
+                        <div class="w-full flex items-center justify-between">
+                            <span class="text-[rgb(113,118,123)] text-[13px]">Entertainment . Trending</span>
+                            <img src="./svgs_imgs/more3.svg" alt="more" class="more">
+                        </div>
+                        <h1 class="text-[15px] font-bold">#SidNaaz</h1>
+                        <span class="text-[13px] text-[rgb(113,118,123)]">1,071 posts</span>
+                    </div>
+                    <div class="three">
+                        <div class="w-full flex items-center justify-between">
+                            <span class="text-[rgb(113,118,123)] text-[13px]">Trending in India</span>
+                            <img src="./svgs_imgs/more3.svg" alt="more" class="more">
+                        </div>
+                        <h1 class="text-[15px] font-bold">जोधपुर ग्रामीण</h1>
+                        <span class="text-[13px] text-[rgb(113,118,123)]">1,650 posts</span>
+                    </div>
+                    <div class="four">
+                        <div class="w-full flex items-center justify-between">
+                            <span class="text-[rgb(113,118,123)] text-[13px]">Trending in India</span>
+                            <img src="./svgs_imgs/more3.svg" alt="more" class="more">
+                        </div>
+                        <h1 class="text-[15px] font-bold">#ManmohanSinghfuneral</h1>
+                        <span class="text-[13px] text-[rgb(113,118,123)]">1,304 posts</span>
+                    </div>
+                    <br>
+                    <a class="text-[rgba(28,148,229,1)]">Show more</a>
+                </div>
+            </div>
+            <div class="sticky top-0">
+                <div class="follow w-[70%] bg-black border border-[#2D3134] rounded-[20px] ml-10 mt-5 p-4">
+                    <h1 class="text-[24px] font-bold">Who to Follow</h1>
+                    <div class="box4 space-y-3">
+                        <div class="five cursor-pointer">
+                            <div class="flex items-center justify-between mt-6">
+                                <div class="flex items-center gap-x-3">
+                                    <img src="./svgs_imgs/cwh.png" alt="cwh" class="w-10 h-10 rounded-full">
+                                    <div class="handle flex flex-col">
+                                        <div class="verified flex items-center gap-x-1">
+                                            <h1 class="text-[15px] font-bold hover:underline">Haris Ali Khan</h1>
+                                            <img src="./svgs_imgs/verified.svg" alt="verified" class="w-5 h-5">
+                                        </div>
+                                        <span class="text-[13px] text-[rgb(113,118,123)]">@codewithharry</span>
+                                    </div>
+                                </div>
+                                <button class="btn bg-white text-black px-3 py-1 rounded-[30px] text-[15px] font-semibold hover:bg-[rgb(239,243,244)]">Follow</button>
+                            </div>
+                        </div>
+                        <div class="six cursor-pointer">
+                            <div class="flex items-center justify-between mt-6">
+                                <div class="flex items-center gap-x-3">
+                                    <img src="./svgs_imgs/vk18.jpg" alt="vk" class="w-10 h-10 rounded-full">
+                                    <div class="handle flex flex-col">
+                                        <div class="verified flex items-center gap-x-1">
+                                            <h1 class="text-[15px] font-bold hover:underline">Virat Kohli</h1>
+                                            <img src="./svgs_imgs/verified.svg" alt="verified" class="w-5 h-5">
+                                        </div>
+                                        <span class="text-[13px] text-[rgb(113,118,123)]">@imVkohli</span>
+                                    </div>
+                                </div>
+                                <button class="btn bg-white text-black px-3 py-1 rounded-[30px] text-[15px] font-semibold hover:bg-[rgb(239,243,244)]">Follow</button>
+                            </div>
+                        </div>
+                        <div class="seven cursor-pointer">
+                            <div class="flex items-center justify-between mt-6">
+                                <div class="flex items-center gap-x-3">
+                                    <img src="./svgs_imgs/ez.jpg" alt="ez" class="w-10 h-10 rounded-full">
+                                    <div class="handle flex flex-col">
+                                        <div class="verified flex items-center gap-x-1">
+                                            <h1 class="text-[15px] font-bold hover:underline">Neeraj Walia</h1>
+                                            <img src="./svgs_imgs/verified.svg" alt="verified" class="w-5 h-5">
+                                        </div>
+                                        <span class="text-[13px] text-[rgb(113,118,123)]">@ezSnippet</span>
+                                    </div>
+                                </div>
+                                <button class="btn bg-white text-black px-3 py-1 rounded-[30px] text-[15px] font-semibold hover:bg-[rgb(239,243,244)]">Follow</button>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <a class="text-[rgba(28,148,229,1)]">Show more</a>
+                </div>  
+                <div class="footer w-[70%] ml-14 mt-5 mb-24">
+                    <ul class="flex flex-wrap gap-x-5">
+                        <li><a>Terms of Service</a></li>
+                        <li><a>Privacy Policy</a></li>
+                        <li><a>Cookie Policy</a></li>
+                        <li><a>Accessibility</a></li>
+                        <li><a>Ads Info</a></li>
+                        <li><a class="flex items-center">
+                            More
+                            <img src="./svgs_imgs/more3.svg" alt="more" class="w-4 h-4 pt-1">
+                        </a></li>
+                        <li>© 2024 X Corp.</li>
+                    </ul>
+                </div>  
+            </div>             
+        </div>
+    </div>
+
+    <!-- for responsiveness -->
+    <div class="top-nav w-full p-[2rem] flex justify-evenly items-center 1000:hidden fixed top-0 bg-[rgb(15,16,16)] z-1 max-h-[10%] opacity-90 transition-all duration-[1000ms] ease-in-out">
+        <img src="./svgs_imgs/pfp.jpg" alt="pfp" class="w-8 h-8 rounded-full cursor-pointer">
+        <img src="./svgs_imgs/x.svg" alt="x" class="w-7 h-7 invert cursor-pointer">
+        <button class="bg-white text-black px-2 py-1 rounded-[20px] text-[14px] font-bold hover:bg-[rgb(239,243,244)]">Try Premium</button>
+    </div>
+
+    <div class="w-full p-[2rem] 1000:flex gap-x-7 items-center hidden 1480:hidden fixed top-0 bg-[rgb(15,16,16)] z-20 h-[10%]">
+        <img src="./svgs_imgs/pfp.jpg" alt="pfp" class="w-8 h-8 rounded-full cursor-pointer ml-44">
+        <h1 class="text-[20px] font-bold">Home</h1>
+    </div>
+
+    <button class="bg-[#1d9bf0] 800:px-7 800:py-3 px-3 py-3 1480:hidden fixed bottom-24 right-7 rounded-full outline-none ring-1 ring-white ring-opacity-20 shadow-lg shadow-white/40">
+        <div class="flex items-center gap-x-2">
+            <img src="./svgs_imgs/post.svg" alt="post" class="w-7 h-7">
+            <span class="text-[17px] font-bold hidden 800:block">Post</span>
+        </div>
+    </button>
+
+    <div class="bottom-nav w-full p-[2rem] flex justify-evenly items-center 1480:hidden fixed bottom-0 bg-black z-1 max-h-[10%] transition-opacity duration-2000 ease-in-out">
+        <img src="./svgs_imgs/home.svg" alt="home" class="w-7 h-7 cursor-pointer">
+        <img src="./svgs_imgs/explore.svg" alt="explore" class="w-7 h-7 cursor-pointer">
+        <img src="./svgs_imgs/grok.svg" alt="grok" class="w-7 h-7 cursor-pointer">
+        <img src="./svgs_imgs/notifications.svg" alt="notifications" class="w-7 h-7 cursor-pointer">
+        <img src="./svgs_imgs/messages.svg" alt="messages" class="w-7 h-7 cursor-pointer">
+        <img src="./svgs_imgs/communities.svg" alt="communities" class="w-7 h-7 cursor-pointer">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

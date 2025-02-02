@@ -1,0 +1,24 @@
+{
+  "name": "x-clone",
+  "version": "1.0.0",
+  "description": "This is the clone of X",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch"
+  },
+  "keywords": [
+    "X",
+    "clone",
+    "twitter"
+  ],
+  "author": "Shinjan",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  }
+}
